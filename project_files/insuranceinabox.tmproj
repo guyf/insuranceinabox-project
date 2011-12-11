@@ -3,14 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>../admin.py</string>
+	<string>../settings.py</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
 			<string>../settings.py</string>
 			<key>lastUsed</key>
-			<date>2011-12-08T15:30:47Z</date>
+			<date>2011-12-11T10:44:23Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -23,26 +25,6 @@
 			<string>../urls.py</string>
 			<key>lastUsed</key>
 			<date>2011-12-08T08:48:01Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>../admin.py</string>
-			<key>lastUsed</key>
-			<date>2011-12-08T15:30:47Z</date>
-			<key>selected</key>
-			<true/>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>../models.py</string>
-			<key>lastUsed</key>
-			<date>2011-12-08T15:27:08Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>../views.py</string>
-			<key>lastUsed</key>
-			<date>2011-12-08T09:16:06Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -82,7 +64,7 @@
 			<key>filename</key>
 			<string>../templates/registration/password_change_done.html</string>
 			<key>lastUsed</key>
-			<date>2011-10-06T17:07:17Z</date>
+			<date>2011-12-11T10:44:23Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -149,20 +131,6 @@
 	<integer>292</integer>
 	<key>metaData</key>
 	<dict>
-		<key>../admin.py</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>38</integer>
-				<key>line</key>
-				<integer>2</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
 		<key>../easy_maps/templatetags/easy_maps_tags.py</key>
 		<dict>
 			<key>caret</key>
@@ -193,20 +161,6 @@
 				<integer>47</integer>
 			</dict>
 		</dict>
-		<key>../models.py</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>9</integer>
-				<key>line</key>
-				<integer>8</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
 		<key>../settings.live.py</key>
 		<dict>
 			<key>caret</key>
@@ -226,14 +180,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>42</integer>
+				<integer>83</integer>
 				<key>line</key>
-				<integer>146</integer>
+				<integer>133</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>137</integer>
+			<integer>113</integer>
 		</dict>
 		<key>../static/css/base.css</key>
 		<dict>
@@ -447,20 +401,6 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>../views.py</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>41</integer>
-				<key>line</key>
-				<integer>16</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>3</integer>
-		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
@@ -468,15 +408,12 @@
 		<string>../easy_maps/templatetags/easy_maps_tags.py</string>
 		<string>../templates/cust_map.html</string>
 		<string>../settings.live.py</string>
-		<string>../models.py</string>
 		<string>../urls.py</string>
 		<string>../templates/registration/registration_complete.html</string>
 		<string>../templates/registration/registration_form.html</string>
 		<string>../templates/registration/login.html</string>
 		<string>../templates/registration/password_reset_done.html</string>
 		<string>../templates/registration/password_reset_confirm.html</string>
-		<string>../views.py</string>
-		<string>../admin.py</string>
 		<string>../templates/home.html</string>
 		<string>../static/css/base.css</string>
 		<string>../templates/welcome.html</string>

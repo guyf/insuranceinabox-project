@@ -97,13 +97,14 @@
 <script src="{{ STATIC_URL }}js/facebook.js" type="text/javascript"></script>
 <script src="{{ STATIC_URL }}js/statictest.js" type="text/javascript"></script>
 <script>
-facebookAppId = '{{ FACEBOOK_APP_ID }}';
-function facebookJSLoaded(){
-FB.init({appId: facebookAppId, status: false, cookie: true, xfbml: true, oauth: true});
-}
-window.fbAsyncInit = facebookJSLoaded;
-F = new facebookClass(facebookAppId);
-F.load();
+	facebookAppId = '{{ FACEBOOK_APP_ID }}';
+	facebookDefaultScope = {{ FACEBOOK_DEFAULT_SCOPE_JS }};
+	function facebookJSLoaded(){
+		FB.init({appId: facebookAppId, status: false, cookie: true, xfbml: true, oauth: true});
+	}
+	window.fbAsyncInit = facebookJSLoaded;
+	F = new facebookClass(facebookAppId);
+    F.load();
 </script>
 </body>
 </html>
