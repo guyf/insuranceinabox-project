@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<script type="text/javascript">
+function copynames(cbox){
+	if (cbox.checked){
+	    $('input[name=first_name]').val($("#fname").html());
+		$('input[name=last_name]').val($("#lname").html());
+	}
+	else if (!cbox.checked){
+	    $('input[name=first_name]').val('');
+		$('input[name=last_name]').val('');
+	}
+	return true;
+}
+</script>
+<div class="container">
+	{% if messages %}{% comment %}TODO: move this out into custom tag{% endcomment %}
+	  <div class="span-24">
+		  {% for message in messages %}
+		    <div {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
+		  {% endfor %}
+	  </div><!--/span-24 -->
+	{% endif %}
+  <div class="span-18 prepend-3">
+	<form method="post" action="." onsubmit="javascript:removecurrency(this);">
+	 {% csrf_token %}
+	    <table>
+	      <tr><td>{{r_form.name}}</td><td NOWRAP><span class="tabletext">give your quote a name so you can retrieve it later</span></td></tr>
+        </table><br />
+      <h3>Vehicle</h3>
+	  <p class="small">All fields are required.</p>
+        <table>
+	      {{ v_form.as_table }}
+        </table><br />
+      <h4>Vehicle's Address</h4>
+        <table>
+	      {{ a_form.as_table }}
+        </table><br />
+      <hr />
+
+      <h3>Main Driver</h3>
+	  <p class="small">All fields are required.</p>
+	  <br />
+	  <p>&nbsp;I am the main driver</span>&nbsp;&nbsp;<input type="checkbox" name="is_driver" value="is_driver" onclick="javascript:copynames(this);"/></p>
+        <table>
+	      {{ md_form.as_table }}
+        </table><br />
+        <h5>Main Driver Claims</h5>
+		{{ md_claims_formset.management_form }}
+		<table class="inline">
+		  <thead>
+		    <tr><th></th><th></th><th></th><th><img style="height:15px;width:15px;" src="/static/images/icons/trash.png" title="check the rows to delete and click update"></th></tr>
+	  </thead>
+	      {% for form in md_claims_formset.forms %}
+	        <tr>{{form.id}}<td>{{form.type}}</td><td>{{form.date}}</td><td>{{form.amount}}</td><td>{{form.DELETE}}</td></tr>
+		  {% endfor %}
+	    </table><br />
+        <h5>Main Driver Convictions</h5>
+		{{ md_convs_formset.management_form }}
+		<table class="inline">
+		  <thead>
+		    <tr><th></th><th></th><th></th><th><img style="height:15px;width:15px;" src="/static/images/icons/trash.png" title="check the rows to delete and click update"></th></tr>
+	  </thead>
+	      {% for form in md_convs_formset.forms %}
+	        <tr>{{form.id}}<td>{{form.type}}</td><td>{{form.date}}</td><td>{{form.amount}}</td><td>{{form.DELETE}}</td></tr>
+		  {% endfor %}
+	    </table><br />
+      <hr />
+
+      {% if drivers %}
+      <h3>Additional Drivers</h3>
+	      {% for ad in drivers %}
+            <p><a href="{% url cv_updatedriver risk_id ad.id %}">{{ad}}</a></p>
+	      {% endfor %}
+        {% endif %}
+	    <div class="buttonpanel">
+		  <a href="{% url iab_home %}"><input type="button" name="cancel" value="Cancel" /></a>
+	      <input type="submit" name="nav_save" value="{% trans 'Save for Later' %}" />
+		  <input type="submit" name="nav_driver" value="{% trans 'Add Additional Drivers' %}" />
+	      <input type="submit" name="nav_quote" value="{% trans 'Get Quote Now' %}" />
+	    </div><!--buttonpanel-->
+
+      </form>
+  </div><!--/span-18 -->
+</div><!--/container-->
+{% endblock content %}

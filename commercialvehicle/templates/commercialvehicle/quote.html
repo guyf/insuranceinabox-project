@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="container">
+	{% if messages %}{% comment %}TODO: move this out into custom tag{% endcomment %}
+	  <div class="span-24">
+		  {% for message in messages %}
+		    <div {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
+		  {% endfor %}
+	  </div><!--/span-24 -->
+	{% endif %}
+  <div class="span-18 prepend-3">
+	<h1>Your Premium</h1>
+	<table class="premium">
+		<tr><td>You can pay a single lump sum by debit or credit card&nbsp;<span class="small">(inclusive of Insurance Premium Tax)</span></td><td width="10%"></td><td class="large loud" width="15%">£{{yearly}}</td><td class="action small" width="12%"><a href="{% url iab_home %}">{% trans 'Buy cover' %}</a></td></tr>
+		<tr><td><br /></td></tr>
+		<tr></td><td>Or you can pay a monthly sum by direct debit&nbsp;<span class="small">(inclusive of Insurance Premium Tax)</span></td></td><td width="10%"></td><td class="large loud" width="15%">£{{monthly}}</td><td class="action small" width="12%"><a href="{% url iab_home %}">{% trans 'Buy cover' %}</a></td></tr>
+	</table>
+    <div class="buttonpanel">
+		<a href="{% url iab_home %}"><input type="button" name="cancel" value="{% trans 'Save for Later' %}" /></a>
+	</div><!--buttonpanel-->
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<hr />
+	<h3>Easily configured rating engine call</h3>
+	<div>
+		<span class="xml">{{ratingxml}}</span>
+	</div>
+	<br />
+	<hr />
+
+
+  </div><!--/span-18 -->
+</div><!--/container-->
+{% endblock content %}

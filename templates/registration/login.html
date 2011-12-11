@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="container">
+{% if messages %}{% comment %}TODO: move this out into custom tag{% endcomment %}
+  <div class="span-24">
+	  {% for message in messages %}
+	    <div {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
+	  {% endfor %}
+  </div><!--/span-24 -->
+{% endif %}
+  <div class="prepend-4 span-16 append-4">
+	<h3>Login</h3>
+    <form method="post" action=".">
+      {% csrf_token %}
+      <input type="hidden" name="next" value="{{ next }}" />
+      <table>
+          <table>
+            <tr><td NOWRAP><span>Email address</span></td><td>&nbsp;&nbsp;</td><td>{{form.username}}</td><td NOWRAP>{{form.username.errors}}</td></tr>
+	   	    <tr><td NOWRAP><span>Password</span></td><td>&nbsp;&nbsp;</td><td>{{form.password}}</td><td NOWRAP>{{form.password.errors}}</td></tr>
+	      </table>
+      </table>
+      <div class="buttonpanel">
+        <input type="submit" value="{% trans 'Login' %}" />
+      </div><!--buttonpanel-->
+    <div style="clear:both;"></div>
+    <br /><br />
+    <p>{% trans "Forgotten password" %}? <a href="{% url auth_password_reset %}">{% trans "Reset it" %}</a>!&nbsp;&nbsp;&nbsp;&nbsp;{% trans "Not yet a member" %}? <a href="{% url registration_register %}">{% trans "Register" %}</a>!</p>
+	</form>
+    <br /><br />
+	<hr />
+	<div class="buttonpanel">
+		<form action="{% url facebook_connect %}?facebook_login=1&amp;register_next={% url welcome %}" method="post">
+			<span class="small">Or sign in with your facebook credentials</span>&nbsp;&nbsp;
+          	<a class="connect-button" href="javascript:void(0)" onclick="F.connect(this.parentNode);return False;"><img src="http://static.ak.fbcdn.net/images/fbconnect/login-buttons/connect_light_large_long.gif" /></a>
+			<input type="hidden" value="{% url welcome %}" name="next" />
+			<input type="hidden" value="{% url welcome %}" name="register_next" />
+			<input type="hidden" value="{% url iab_home %}" name="error_next" />
+			<div style="clear:both;"></div>
+    	</form>
+	</div><!--buttonpanel-->
+  </div><!--span-8-->
+</div><!--container-->
+{% endblock %}

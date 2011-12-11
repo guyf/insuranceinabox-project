@@ -1,0 +1,10 @@
+{% load i18n %}
+{% trans "Activate account at" %} {{ site.name }}:
+
+{% blocktrans %}
+The link below will activate your {{ site.name }} account and is valid for {{ expiration_days }} days.
+
+If you have not yet entered a password for {{ site.name }} a temporary password of your email address will have been created for you. Once logged in please click your name (in the top right corner) to create a new password. 
+{% endblocktrans %}
+
+http://{{ site.domain }}{% url registration_activate activation_key %}

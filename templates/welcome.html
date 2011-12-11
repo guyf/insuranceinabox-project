@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="container">
+{% if messages %}{% comment %}TODO: move this out into custom tag{% endcomment %}
+  <div class="span-24">
+	  {% for message in messages %}
+	    <div {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
+	  {% endfor %}
+  </div><!--/span-24 -->
+{% endif %}
+
+  <div class="span-24">
+  </div><!-- span-24 -->
+  <div class="span-10 prepend-1 append-1">
+	  <h1>New Quotes</h1>
+      <p><a href="{% url cv_selectprofile %}">Get a commercial vehicle quote</a></p>
+  </div><!-- span-10 -->
+  <div class="span-10 prepend-1 append-1 last">
+	  <h1>Saved Quotes</h1>
+	  {% for r in risks %}
+        <p><a href="{% url cv_updaterisk r.id %}">{{r.name}}</a></p>
+	  {% endfor %}
+	  <br /><br /><br />
+  </div><!-- span-10 -->
+  <div class="span-23 prepend-1">
+      <h1>All risks mapped</h1>
+         <p><a href="{% url map %}">click to locate all risks</a></p>
+      <br /><br />
+  </div><!-- span-24 -->
+</div><!--/container -->
+{% endblock content %}

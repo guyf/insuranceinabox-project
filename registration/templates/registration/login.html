@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="container">
+{% if messages %}{% comment %}TODO: move this out into custom tag{% endcomment %}
+  <div class="span-24">
+	  {% for message in messages %}
+	    <div {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
+	  {% endfor %}
+  </div><!--/span-24 -->
+{% endif %}
+  <div class="prepend-8 span-8 append-8">
+    <form method="post" action=".">
+      {% csrf_token %}
+      <input type="hidden" name="next" value="{{ next }}" />
+      <table>
+        {{form.as_table}}
+      </table>
+      <div class="buttonpanel">
+        <input type="submit" value="{% trans 'Log in' %}" />
+      </div><!--buttonpanel-->   
+    </form>
+    <div style="clear:both;"></div>
+    <br /><br />
+    <p>{% trans "Forgotten password" %}? <a href="{% url auth_password_reset %}">{% trans "Reset it" %}</a>!</p>
+    <p>{% trans "Not yet a member" %}? <a href="{% url registration_register %}">{% trans "Register" %}</a>!</p>
+  </div><!--span-8-->
+</div><!--container-->
+{% endblock %}

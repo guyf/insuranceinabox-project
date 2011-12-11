@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="container">
+{% if messages %}{% comment %}TODO: move this out into custom tag{% endcomment %}
+  <div class="span-24">
+	  {% for message in messages %}
+	    <div {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
+	  {% endfor %}
+  </div><!--/span-24 -->
+{% endif %}
+
+<div class="span-24">
+	<br /><br />
+	<p class="intro">Insurance in A Box is a web development toolset to allow you to get new insurance products and services out to online customers in hours or days, rather than weeks or months<p>
+	<br />
+	<p class="action">{% trans "To give our example commercial vehicle quote a try please" %}&nbsp;<a href="{% url login %}">{% trans "login" %}</a>&nbsp;{% trans "or" %}&nbsp;<a href="{% url registration_register %}">{% trans "register and login" %}</a></p>
+	<br />
+	<p class="action">To find out more please&nbsp;<a href="#contactus">contact us</a></p>
+    <br /><br /><hr />
+	
+	<h1>Key features</h1>
+  	<h5>Rapid product definition and deployment</h5>
+  	<p class="explain">Define your products in a simple text file format and they automatically display on web forms.</p>
+	<h5>Profile cluster analysis based instant quotes</h5>
+	<p class="explain">Identify common profiles, ask potential customers to select their closest match and provide an instant indicative quote, then adjust details for a final quote. We can show you how to run <a href="http://en.wikipedia.org/wiki/Cluster_analysis" target="_">cluster analysis</a> on your existing data to find those profiles.</p>
+  	<h5>Rapid web form and widget customisation</h5>
+  	<p class="explain">Use the standard forms, include or exclude fields, specify UI widgets used, provide default values.</p>
+	<h5>Automatic back-office administration interface</h5>
+	<p class="explain">Auto-generated set of pages for administrators to see and adjust all data.</p>
+	<h5>Easily configured rating engine integration</h5>
+	<p class="explain">Outputs an easily configurable XML message of any new risk for consumption by your existing rating engines.</p>
+  	<h5>Geocoding and Google maps integration</h5>	
+  	<p class="explain">All addresses entered are automatically geocoded and the geocodes stored. View all of your insured risks on a google map. Roll over the dropped pins for a summary of the risk.</p>
+  	<h5>User registration and authentication</h5>
+  	<p class="explain">Allow users to sign up and save quotes, (optionally) send an email with a unique activation link to validate email addresses of registering users.</p>
+  	<h5>Simple white labelling</h5>
+  	<p class="explain">Run multiple (cosmetically different) sites against the same user and product databases, multi-language facilities to change to another language or just slightly different wording</p>
+	<h5>Examples and Design Patters</h5>
+  	<p class="explain">Last but certainly not least (if you are a developer) we provide some examples and design patterns to show you how to get started launching insurance services.
+    <br /><br /><hr />
+
+	<h1>Features coming soon</h1>
+	<p class="action"><a href="#contactus">Let us know</a> if any of the features below are high on your priority list and we'll reprioritise.</p>
+	<br />
+	<h5>Automated Server Configuration</h5>
+	<p class="explain">IAB already runs in the cloud, in fact this demo is on Amazon EC2. The next step is to automatically and repeatably built direct to the cloud from<a href="http://www.opscode.com/chef/" target="_">Chef</a> scripts.</p>
+	<h5>Postcode lookups</h5>
+	<p class="explain">Postcodes converted to addresses, addresses converted to geocodes. You will be able to use your - almost certainly existing - postcode database (which is why this is not higher on the list).</p>
+	<h5>Facebook integration</h5>
+	<p class="explain">Allow your customers to register and authenticate with their facebook id. Use their profile information to cut down risk data entry.</p>
+	<h5>LinkedIn integration</h5>
+	<p class="explain">Allow your customers to register and authenticate with their LinkedIn id. Use their profile information to cut down risk data entry.</p>
+    <br /><br /><hr />
+
+	<h1>How it works</h1>
+	<h5>Harnesses the best of the web</h5>
+	<p class="explain">Insurance in A Box harnesses the <a href="https://www.djangoproject.com/" target="_">Django web development framework</a> and incorporates <a href="http://blueprintcss.org/" target="_">Blueprint CSS</a> and <a href="http://jquery.com/" target="_">jQuery</a>.</p>
+	<h5>Adds some useful bits and pieces</h5>
+	<p  class="explain">We develop and incorporated extensions for things like XML serialisation, Google maps integration and social network integration. Its not rocket science but who wants to have to maintain rockets? You just need to get new and better insurance products out to the web faster than your competition.</p>
+	<h5>Keep the data architecture simple</h5>
+	<p class="explain">For each new product defined Insurance in A Box (via Django) creates a new set of relational tables, linked into the existing user tables. No SQL coding required and no trying to shoehorn new products into old schemas (it never works anyway).</p>
+    <br /><br /><hr />
+
+	<h1>Contact Us</h1><a name="contactus"></a>
+	<br />
+	<p  class="contact">Kube Partners UK Dowgate Hill House London EC4R 2SU</p>
+	<p  class="contact">Telephone: +44 (0) 20 3167 4799 and ask for Guy Farley</p>
+	<p><a class="contact" href="mailto:iabenquiries@kubepartners.com">iabenquiries@kubepartners.com</a></p>
+    <br /><br />
+  </div><!-- span-24 -->
+</div><!--/container -->
+{% endblock content %}

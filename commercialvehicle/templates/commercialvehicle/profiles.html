@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="container">
+	{% if messages %}{% comment %}TODO: move this out into custom tag{% endcomment %}
+	  <div class="span-24">
+		  {% for message in messages %}
+		    <div {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
+		  {% endfor %}
+	  </div><!--/span-24 -->
+	{% endif %}
+  <div class="span-18 prepend-3 optioncont">
+	<h1>Select Your Nearest Match</h1>
+		{% for p in profiles %}
+		  <script>
+			$(document).ready(function(){
+			  $('#{{p.id}}_div').click(
+			  function()
+			  {
+		    	window.location = $(this).attr("url");
+		    	return false;
+			  });
+			});
+		  </script>
+		  <div id="{{p.id}}_div" class="profiletile" url="{% url cv_cloneprofile p.id %}">
+			  <p>{{p.name}}</p>
+			  <p class="small">{{p.desc}}</p>
+		  </div><!-- profiletile -->
+		{% endfor %}
+		  <script>
+			$(document).ready(function(){
+			  $('#create_new_div').click(
+			  function()
+			  {
+		    	window.location = $(this).attr("url");
+		    	return false;
+			  });
+			});
+		  </script>
+		  <div id="create_new_div" class="profiletile_new" url="{% url cv_createrisk %}">
+			  <p>None of the above</p>
+			  <p class="small">You aren't much like any of the profiles above. Don't worry we can still provide insurance for you, just tell us about your vehicle and business</p>
+		  </div><!-- profiletile -->
+  </div><!--/span-18 -->
+</div><!--/container-->
+{% endblock content %}

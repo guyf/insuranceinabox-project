@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="container">
+	{% if messages %}{% comment %}TODO: move this out into custom tag{% endcomment %}
+	  <div class="span-24">
+		  {% for message in messages %}
+		    <div {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
+		  {% endfor %}
+	  </div><!--/span-24 -->
+	{% endif %}
+  <div class="span-18 prepend-3">
+	<form method="post" action=".">
+	  {% csrf_token %}
+      <h3>Additional Driver</h3>
+	  <p class="small">All fields are required.</p>
+        <table>
+	      {{ ad_form.as_table }}
+        </table><br />
+        <h5>Additional Driver Claims</h5>
+		{{ ad_claims_formset.management_form }}
+		<table class="inline">
+		  <thead>
+		    <tr><th></th><th></th><th></th><th><img style="height:15px;width:15px;" src="/static/images/icons/trash.png" title="check the rows to delete and click update"></th></tr>
+	  </thead>
+	      {% for form in ad_claims_formset.forms %}
+	        <tr>{{form.id}}<td>{{form.type}}</td><td>{{form.date}}</td><td>{{form.amount}}</td><td>{{form.DELETE}}</td></tr>
+		  {% endfor %}
+	    </table><br />
+        <h5>Additional Driver Convictions</h5>
+		{{ ad_convs_formset.management_form }}
+		<table class="inline">
+		  <thead>
+		    <tr><th></th><th></th><th></th><th><img style="height:15px;width:15px;" src="/static/images/icons/trash.png" title="check the rows to delete and click update"></th></tr>
+	  </thead>
+	      {% for form in ad_convs_formset.forms %}
+	        <tr>{{form.id}}<td>{{form.type}}</td><td>{{form.date}}</td><td>{{form.amount}}</td><td>{{form.DELETE}}</td></tr>
+		  {% endfor %}
+	    </table>
+	    <br /><br />
+	    <div class="buttonpanel">
+		  <a href="{% url cv_updaterisk risk_id %}"><input type="button" name="cancel" value="Cancel" /></a>
+	      <input type="submit" name="nav_save" value="{% trans 'Save' %}" />
+	    </div><!--buttonpanel-->
+     </form>
+  </div><!--/span-18 -->
+</div><!--/container-->
+{% endblock content %}
