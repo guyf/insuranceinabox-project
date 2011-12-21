@@ -18,12 +18,10 @@ class UserProfile(FacebookProfileModel):
 
     def create_user_profile(sender, instance, created, **kwargs):
         """Create the UserProfile when a new User is saved"""
-        logging.debug("CREATING PROFILE1")
         if created:
-            logging.debug("CREATING PROFILE1")
+            logging.debug("CREATING PROFILE for %s " % instance.first_name)
             profile = UserProfile()
             profile.user = instance
             profile.save()
     
-    import logging;logging.debug("REGISTERING")
     post_save.connect(create_user_profile, sender=User)

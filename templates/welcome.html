@@ -2,6 +2,10 @@
 {% load i18n %}
 
 {% block content %}
+{% if oauth_url %}
+	<script>self.location.href="{{oauth_url|safe}}"</script>
+{% endif %}
+
 <div class="container">
 {% if messages %}{% comment %}TODO: move this out into custom tag{% endcomment %}
   <div class="span-24">

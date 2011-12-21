@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib import admin
-from insuranceinabox.models import IABProfile
+from insuranceinabox.models import UserProfile
 
-admin.site.register(IABProfile)
+admin.site.register(UserProfile)
 

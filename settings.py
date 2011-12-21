@@ -21,7 +21,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '/Users/guyf/Development/InsuranceInABox/db/data', # Or path to database file if using sqlite3.
+        'NAME': '/Users/guyf/Development/InsuranceInABox-project/db/data', # Or path to database file if using sqlite3.
         'USER': '', # Not used with sqlite3.
         'PASSWORD': '', # Not used with sqlite3.
         'HOST': '', # Set to empty string for localhost. Not used with sqlite3.
@@ -131,7 +131,7 @@ INSTALLED_APPS = (
 FACEBOOK_APP_ID = '202615116484293'
 FACEBOOK_APP_SECRET = '50d81741d36122fc8e383f13cb89f7c2'
 FACEBOOK_API_KEY = '202615116484293'
-FACEBOOK_DEFAULT_SCOPE = ('email', 'user_about_me', 'user_birthday', 'user_website')
+FACEBOOK_DEFAULT_SCOPE = ('email', 'user_birthday')
 
 #Registration settings
 REGISTRATION_BACKEND = 'emailregistration.backends.registration.SimpleEmailRegBackend'
@@ -145,7 +145,7 @@ LOGOUT_REDIRECT_URL = '/'
 
 #Auth settings
 AUTHENTICATION_BACKENDS = ('emailregistration.backends.auth.SimpleEmailAuthBackend','django.contrib.auth.backends.ModelBackend','django_facebook.auth_backends.FacebookBackend',)
-AUTH_PROFILE_MODULE = 'insuranceinabox.IABProfile'
+AUTH_PROFILE_MODULE = 'insuranceinabox.UserProfile'
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',

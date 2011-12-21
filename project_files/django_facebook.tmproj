@@ -3,179 +3,121 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>../../3rdpartyappslib/django_facebook327/connect.py</string>
+	<string>../../3rdpartyappslib/open_facebook-v3.2.7-32/api.py</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
-			<string>../../3rdpartyappslib/django_facebook327/urls.py</string>
+			<string>../static/js/facebook.js</string>
 			<key>lastUsed</key>
-			<date>2011-12-07T18:22:47Z</date>
+			<date>2011-12-12T07:22:01Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>../../3rdpartyappslib/django_facebook327/views.py</string>
+			<string>../../3rdpartyappslib/django_facebook-v3.2.7-32/views.py</string>
 			<key>lastUsed</key>
-			<date>2011-12-08T08:16:16Z</date>
+			<date>2011-12-16T07:51:10Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>../../3rdpartyappslib/django_facebook327/models.py</string>
+			<string>../../3rdpartyappslib/django_facebook-v3.2.7-32/connect.py</string>
 			<key>lastUsed</key>
-			<date>2011-12-06T17:05:55Z</date>
+			<date>2011-12-14T07:14:46Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>../../3rdpartyappslib/django_facebook327/connect.py</string>
+			<string>../../3rdpartyappslib/django_facebook-v3.2.7-32/api.py</string>
 			<key>lastUsed</key>
-			<date>2011-12-08T08:21:08Z</date>
+			<date>2011-12-16T17:58:59Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>../../3rdpartyappslib/django_facebook-v3.2.7-32/utils.py</string>
+			<key>lastUsed</key>
+			<date>2011-12-16T17:58:45Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>../../3rdpartyappslib/django_facebook-v3.2.7-32/models.py</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>../../3rdpartyappslib/open_facebook-v3.2.7-32/api.py</string>
+			<key>lastUsed</key>
+			<date>2011-12-16T17:58:59Z</date>
 			<key>selected</key>
 			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>../../3rdpartyappslib/django_facebook327/api.py</string>
+			<string>../../3rdpartyappslib/open_facebook-v3.2.7-32/utils.py</string>
 			<key>lastUsed</key>
-			<date>2011-11-30T10:31:39Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>../../3rdpartyappslib/django_facebook327/utils.py</string>
-			<key>lastUsed</key>
-			<date>2011-12-08T08:21:08Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>../../3rdpartyappslib/django_facebook327/decorators.py</string>
-			<key>lastUsed</key>
-			<date>2011-11-30T06:51:34Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>../static/js/facebook.js</string>
-			<key>lastUsed</key>
-			<date>2011-11-29T06:48:40Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>../../3rdpartyappslib/django_facebook327/auth_backends.py</string>
-			<key>lastUsed</key>
-			<date>2011-11-29T18:36:32Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>../../3rdpartyappslib/open_facebook/api.py</string>
-			<key>lastUsed</key>
-			<date>2011-11-30T10:43:07Z</date>
+			<date>2011-12-16T07:39:04Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
-		<key>../../3rdpartyappslib/django_facebook327/api.py</key>
+		<key>../../3rdpartyappslib/django_facebook-v3.2.7-32/api.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>62</integer>
+				<integer>17</integer>
 				<key>line</key>
-				<integer>109</integer>
+				<integer>129</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>80</integer>
+		</dict>
+		<key>../../3rdpartyappslib/django_facebook-v3.2.7-32/connect.py</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>23</integer>
+				<key>line</key>
+				<integer>50</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>103</integer>
+			<integer>35</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>16</integer>
+				<integer>18</integer>
 				<key>line</key>
-				<integer>109</integer>
+				<integer>50</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>62</integer>
+				<integer>23</integer>
 				<key>line</key>
-				<integer>109</integer>
+				<integer>50</integer>
 			</dict>
 		</dict>
-		<key>../../3rdpartyappslib/django_facebook327/auth_backends.py</key>
+		<key>../../3rdpartyappslib/django_facebook-v3.2.7-32/utils.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>53</integer>
 				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>../../3rdpartyappslib/django_facebook327/connect.py</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>8</integer>
-				<key>line</key>
-				<integer>169</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>124</integer>
-		</dict>
-		<key>../../3rdpartyappslib/django_facebook327/decorators.py</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>42</integer>
-				<key>line</key>
-				<integer>37</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>../../3rdpartyappslib/django_facebook327/models.py</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>10</integer>
-				<key>line</key>
-				<integer>16</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>4</integer>
-				<key>line</key>
-				<integer>16</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
 				<integer>24</integer>
-				<key>line</key>
-				<integer>16</integer>
 			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
 		</dict>
-		<key>../../3rdpartyappslib/django_facebook327/urls.py</key>
+		<key>../../3rdpartyappslib/django_facebook-v3.2.7-32/views.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -187,65 +129,51 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>6</integer>
 		</dict>
-		<key>../../3rdpartyappslib/django_facebook327/utils.py</key>
+		<key>../../3rdpartyappslib/open_facebook-v3.2.7-32/api.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>109</integer>
+				<integer>18</integer>
 				<key>line</key>
-				<integer>80</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>106</integer>
-		</dict>
-		<key>../../3rdpartyappslib/django_facebook327/views.py</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>42</integer>
-				<key>line</key>
-				<integer>62</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>46</integer>
-		</dict>
-		<key>../../3rdpartyappslib/open_facebook/api.py</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>31</integer>
-				<key>line</key>
-				<integer>240</integer>
+				<integer>200</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>198</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>26</integer>
+				<integer>6</integer>
 				<key>line</key>
-				<integer>240</integer>
+				<integer>200</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>31</integer>
+				<integer>27</integer>
 				<key>line</key>
-				<integer>240</integer>
+				<integer>200</integer>
 			</dict>
+		</dict>
+		<key>../../3rdpartyappslib/open_facebook-v3.2.7-32/utils.py</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
 		</dict>
 		<key>../static/js/facebook.js</key>
 		<dict>
@@ -259,25 +187,22 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>10</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>../../3rdpartyappslib/django_facebook327/views.py</string>
 		<string>../static/js/facebook.js</string>
-		<string>../../3rdpartyappslib/django_facebook327/models.py</string>
-		<string>../../3rdpartyappslib/django_facebook327/connect.py</string>
-		<string>../../3rdpartyappslib/django_facebook327/decorators.py</string>
-		<string>../../3rdpartyappslib/django_facebook327/utils.py</string>
-		<string>../../3rdpartyappslib/django_facebook327/auth_backends.py</string>
-		<string>../../3rdpartyappslib/django_facebook327/api.py</string>
-		<string>../../3rdpartyappslib/open_facebook/api.py</string>
-		<string>../../3rdpartyappslib/django_facebook327/urls.py</string>
+		<string>../../3rdpartyappslib/django_facebook-v3.2.7-32/connect.py</string>
+		<string>../../3rdpartyappslib/django_facebook-v3.2.7-32/utils.py</string>
+		<string>../../3rdpartyappslib/django_facebook-v3.2.7-32/api.py</string>
+		<string>../../3rdpartyappslib/open_facebook-v3.2.7-32/api.py</string>
+		<string>../../3rdpartyappslib/open_facebook-v3.2.7-32/utils.py</string>
+		<string>../../3rdpartyappslib/django_facebook-v3.2.7-32/views.py</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{666, 8}, {1036, 1074}}</string>
+	<string>{{399, 12}, {1036, 1074}}</string>
 </dict>
 </plist>

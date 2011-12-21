@@ -25,7 +25,7 @@ function copyuname(){
 	    <form method="post" action="." onsubmit-out="javascript:copyuname();">
 	      {% csrf_token %}
           {{form.username}}
-	      <table>
+	      <table class="no-zebra">
             <tr><td>{{form.email}}</td><td>&nbsp;&nbsp;</td><td NOWRAP><span class="tabletext">(used to guarantee a unique username)</span></td><td NOWRAP>{{form.email.errors}}</td></tr>
 	   	    <tr><td>{{form.first_name}}</td><td>&nbsp;&nbsp;</td><td NOWRAP><span class="tabletext">enter your first name</span></td><td NOWRAP>{{form.first_name.errors}}</td></tr>
 		    <tr><td>{{form.last_name}}</td><td>&nbsp;&nbsp;</td><td NOWRAP><span class="tabletext">and your last name</span></td><td NOWRAP>{{form.last_name.errors}}</td></tr>
@@ -40,15 +40,15 @@ function copyuname(){
         <div style="clear:both;"></div>
 		<br />
 		<br />
-    	<form action="{% url facebook_connect %}?facebook_login=1&amp;register_next={% url welcome %}" method="post">
-			<div class="buttonpanel">
+		<div class="buttonpanel">
+    		<form action="{% url facebook_connect %}?facebook_login=1&amp;register_next={% url welcome %}" method="post">
 				<span class="small">Or instead of creating yet another account</span>&nbsp;&nbsp;
             	<a class="connect-button" href="javascript:void(0)" onclick="F.connect(this.parentNode);return False;"><img src="http://static.ak.fbcdn.net/images/fbconnect/login-buttons/connect_light_large_long.gif" /></a>
-			</div><!--buttonpanel-->
-			<input type="hidden" value="{% url welcome %}" name="next" />
-			<input type="hidden" value="{% url welcome %}" name="register_next" />
-			<input type="hidden" value="{% url iab_home %}" name="error_next" />
-      </form>
+				<input type="hidden" value="{% url welcome %}" name="next" />
+				<input type="hidden" value="{% url welcome %}" name="register_next" />
+				<input type="hidden" value="{% url iab_home %}" name="error_next" />
+      		</form>
+		</div><!--buttonpanel-->
       </div><!--/addparticipants -->
 	</div><!--/span-18 -->
   </div><!--/span-24 -->
