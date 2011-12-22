@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>../../3rdpartyappslib/open_facebook-v3.2.7-32/api.py</string>
+	<string>../../3rdpartyappslib/django_facebook-v3.2.7-32/api.py</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -22,19 +22,21 @@
 			<key>filename</key>
 			<string>../../3rdpartyappslib/django_facebook-v3.2.7-32/connect.py</string>
 			<key>lastUsed</key>
-			<date>2011-12-14T07:14:46Z</date>
+			<date>2011-12-22T08:42:26Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>../../3rdpartyappslib/django_facebook-v3.2.7-32/api.py</string>
 			<key>lastUsed</key>
-			<date>2011-12-16T17:58:59Z</date>
+			<date>2011-12-22T11:44:17Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>../../3rdpartyappslib/django_facebook-v3.2.7-32/utils.py</string>
 			<key>lastUsed</key>
-			<date>2011-12-16T17:58:45Z</date>
+			<date>2011-12-22T11:43:45Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -44,15 +46,13 @@
 			<key>filename</key>
 			<string>../../3rdpartyappslib/open_facebook-v3.2.7-32/api.py</string>
 			<key>lastUsed</key>
-			<date>2011-12-16T17:58:59Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2011-12-22T11:44:17Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>../../3rdpartyappslib/open_facebook-v3.2.7-32/utils.py</string>
 			<key>lastUsed</key>
-			<date>2011-12-16T07:39:04Z</date>
+			<date>2011-12-22T11:43:50Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
@@ -71,7 +71,7 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>80</integer>
+			<integer>66</integer>
 		</dict>
 		<key>../../3rdpartyappslib/django_facebook-v3.2.7-32/connect.py</key>
 		<dict>
@@ -87,7 +87,7 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>35</integer>
+			<integer>17</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
@@ -108,9 +108,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>53</integer>
+				<integer>39</integer>
 				<key>line</key>
-				<integer>24</integer>
+				<integer>57</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -145,7 +145,7 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>198</integer>
+			<integer>115</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
@@ -173,7 +173,7 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>31</integer>
 		</dict>
 		<key>../static/js/facebook.js</key>
 		<dict>
@@ -203,6 +203,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{399, 12}, {1036, 1074}}</string>
+	<string>{{1966, 119}, {1036, 1074}}</string>
 </dict>
 </plist>

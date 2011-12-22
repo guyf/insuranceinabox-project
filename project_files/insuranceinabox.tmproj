@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>../urls.py</string>
+	<string>../insuranceinabox/views.py</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
 			<string>../settings.py</string>
 			<key>lastUsed</key>
-			<date>2011-12-12T15:14:21Z</date>
+			<date>2011-12-22T16:46:07Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -22,9 +22,7 @@
 			<key>filename</key>
 			<string>../urls.py</string>
 			<key>lastUsed</key>
-			<date>2011-12-20T07:04:46Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2011-12-22T16:38:13Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -42,7 +40,9 @@
 			<key>filename</key>
 			<string>../insuranceinabox/views.py</string>
 			<key>lastUsed</key>
-			<date>2011-12-20T07:04:41Z</date>
+			<date>2011-12-22T16:46:07Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -54,13 +54,13 @@
 			<key>filename</key>
 			<string>../templates/home.html</string>
 			<key>lastUsed</key>
-			<date>2011-12-13T17:21:50Z</date>
+			<date>2011-12-22T11:49:39Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>../templates/welcome.html</string>
 			<key>lastUsed</key>
-			<date>2011-12-15T08:47:10Z</date>
+			<date>2011-12-22T11:49:36Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -130,7 +130,7 @@
 			<key>filename</key>
 			<string>../templates/cust_map.html</string>
 			<key>lastUsed</key>
-			<date>2011-11-22T14:56:25Z</date>
+			<date>2011-12-22T07:44:25Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -212,14 +212,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>59</integer>
+				<integer>80</integer>
 				<key>line</key>
-				<integer>78</integer>
+				<integer>56</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>35</integer>
 		</dict>
 		<key>../settings.live.py</key>
 		<dict>
@@ -240,30 +240,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>14</integer>
+				<integer>21</integer>
 				<key>line</key>
-				<integer>133</integer>
+				<integer>134</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>108</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>133</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>22</integer>
-				<key>line</key>
-				<integer>133</integer>
-			</dict>
+			<integer>104</integer>
 		</dict>
 		<key>../static/css/base.css</key>
 		<dict>
@@ -347,9 +331,9 @@
 				<integer>47</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>122</integer>
+			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>36</integer>
+			<integer>32</integer>
 		</dict>
 		<key>../templates/registration/login.html</key>
 		<dict>
@@ -536,6 +520,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{173, 260}, {1036, 864}}</string>
+	<string>{{126, 175}, {1169, 988}}</string>
 </dict>
 </plist>

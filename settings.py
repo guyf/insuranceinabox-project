@@ -132,6 +132,7 @@ FACEBOOK_APP_ID = '202615116484293'
 FACEBOOK_APP_SECRET = '50d81741d36122fc8e383f13cb89f7c2'
 FACEBOOK_API_KEY = '202615116484293'
 FACEBOOK_DEFAULT_SCOPE = ('email', 'user_birthday')
+FACEBOOK_APP_NAME = 'insurance-in-a-box-d'
 
 #Registration settings
 REGISTRATION_BACKEND = 'emailregistration.backends.registration.SimpleEmailRegBackend'
