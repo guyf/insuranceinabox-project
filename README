@@ -1,0 +1,4 @@
+Requirements
+============
+
+1. PIL (for MacOS 10.7 do 'sudo easy_install PIL' and ignore the billion warnings)

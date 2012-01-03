@@ -21,7 +21,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '/Users/guyf/Development/InsuranceInABox-project/db/data', # Or path to database file if using sqlite3.
+        'NAME': os.path.join(PROJECT_DIR, 'db' ,'data'), # Or path to database file if using sqlite3.
         'USER': '', # Not used with sqlite3.
         'PASSWORD': '', # Not used with sqlite3.
         'HOST': '', # Set to empty string for localhost. Not used with sqlite3.
@@ -52,7 +52,7 @@ USE_I18N = True
 # calendars according to the current locale
 USE_L10N = True
 
-DOMAIN_ROOT_URL = 'http://guys-imac.local:8000'
+DOMAIN_ROOT_URL = 'http://localhost:8000'
 ROOT_URLCONF = 'urls'
 
 # Absolute path to the directory that holds media.
@@ -117,9 +117,9 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # 'django.contrib.admindocs',
     'registration',
-    'emailregistration',
-    'django_facebook',
-    'open_facebook',
+    'emailregistration',    # external
+    'django_facebook',  # external
+    'open_facebook',  # external
     'rosetta',
     'easymode',
     'insuranceinabox',

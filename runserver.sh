@@ -1,2 +1,2 @@
 #! /bin/sh
-python ./manage.py runserver guys-imac.local:8000
+python ./manage.py runserver localhost:8000
