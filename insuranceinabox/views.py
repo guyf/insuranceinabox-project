@@ -10,6 +10,7 @@ from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic.simple import redirect_to
 from commercialvehicle.models import Risk, VehicleAddress
+from familyincomebenefit.models import FIBRisk
 from easy_maps.models import Address
 
 
@@ -24,9 +25,10 @@ def home(request):
 def welcome(request):
     ''' list all the quotes the customer has all the products they cold get quotes on '''
     
-    rs = Risk.objects.all().filter(user=request.user)
+    cvrs = Risk.objects.all().filter(user=request.user)
+    fibrs = FIBRisk.objects.all().filter(user=request.user)
     
-    return render_to_response('welcome.html', {'risks':rs}, context_instance=RequestContext(request))
+    return render_to_response('welcome.html', {'cv_risks':cvrs, 'fib_risks':fibrs}, context_instance=RequestContext(request))
     
     
 @csrf_exempt

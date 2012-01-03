@@ -20,13 +20,19 @@
   <div class="span-10 prepend-1 append-1">
 	  <h1>New Quotes</h1>
       <p><a href="{% url cv_selectprofile %}">Get a commercial vehicle quote</a></p>
+      <p><a href="{% url fib_createrisk %}">Get a family income benefit quote</a></p>
   </div><!-- span-10 -->
   <div class="span-10 prepend-1 append-1 last">
-	  <h1>Saved Quotes</h1>
-	  {% for r in risks %}
+	  <h1>Saved CV Quotes</h1>
+	  {% for r in cv_risks %}
         <p><a href="{% url cv_updaterisk r.id %}">{{r.name}}</a></p>
 	  {% endfor %}
-	  <br /><br /><br />
+	  <br />
+	  <h1>Saved FIB Quotes</h1>
+	  {% for r in fib_risks %}
+        <p><a href="{% url fib_updaterisk r.id %}">{{r.name}}</a></p>
+	  {% endfor %}
+	  <br /><br />
   </div><!-- span-10 -->
   <div class="span-23 prepend-1">
       <h1>All risks mapped</h1>

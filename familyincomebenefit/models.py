@@ -7,9 +7,9 @@ from easy_maps.models import Address
 
 
 @toxml
-class Risk(models.Model):
+class FIBRisk(models.Model):
     name = models.CharField(max_length=50, blank=True)
-    user = models.ForeignKey(User)
+    user = models.ForeignKey(User, related_name='fib_risk')
     #FK one clusterprofile 
     #FK many quote
     #FK many policy
@@ -42,13 +42,13 @@ class Risk(models.Model):
 
 
 class ClusterProfile(models.Model):
-    risk = models.OneToOneField(Risk)
+    risk = models.OneToOneField(FIBRisk)
     name = models.CharField(max_length=50)
     desc = models.CharField(max_length=400, blank=True)
 
 
 class LifeInsured(models.Model):
-    risk = models.OneToOneField(Risk)
+    risk = models.OneToOneField(FIBRisk)
     user = models.ForeignKey(User, blank=True, null=True)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
@@ -66,8 +66,8 @@ class LifeInsured(models.Model):
         return str(self.first_name + ' ' + self.last_name)
         
 class Address(models.Model):
-    vehicle = models.OneToOneField(Vehicle, null=True)
-    geocoded_address = models.ForeignKey(Address, blank=True, null=True)
+    risk = models.OneToOneField(FIBRisk, null=True)
+    geocoded_address = models.ForeignKey(Address, blank=True, null=True, related_name='fib_address')
     flat_number = models.CharField(_('Flat No'), max_length = 20, blank = True)
     number = models.CharField(_('Building Name or Number'), max_length = 20)
     street_line1 = models.CharField(_('Address 1'), max_length = 100)
@@ -85,7 +85,7 @@ class Address(models.Model):
         return ''.join(str_list)
         
 class Quote(models.Model):
-    risk = models.ForeignKey(Risk)
+    risk = models.ForeignKey(FIBRisk)
     amount = models.DecimalField(verbose_name='Amount', max_digits=12, decimal_places=2)
     date = models.DateField(verbose_name='Quote date', default=datetime.date.today())
     validto_date = models.DateField(verbose_name='Quote valid until', default=datetime.date.today())
@@ -94,7 +94,7 @@ class Quote(models.Model):
         return self.amount
 
 class Policy(models.Model):
-    risk = models.ForeignKey(Risk)
+    risk = models.ForeignKey(FIBRisk)
     renewal_date = models.DateField(verbose_name='Renewal Date', default=datetime.date.today())
     number = models.CharField(max_length=30, verbose_name='Policy Number')
     is_onrisk = models.BooleanField(default=False)

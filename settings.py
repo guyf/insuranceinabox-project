@@ -124,6 +124,7 @@ INSTALLED_APPS = (
     'easymode',
     'insuranceinabox',
     'commercialvehicle',
+    'familyincomebenefit',
     'geopy',
     'easy_maps'
 )

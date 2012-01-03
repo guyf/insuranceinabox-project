@@ -17,6 +17,7 @@ urlpatterns = patterns('',
     url(r'^map/$', map, name='map'),
     (r'^facebook/', include('django_facebook.urls')), #facebook/connect
     (r'^commercialvehicle/', include('commercialvehicle.urls')),
+    (r'^familyincomebenefit/', include('familyincomebenefit.urls')),
 )
 
 

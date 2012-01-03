@@ -1,5 +1,5 @@
 from django.contrib import admin
-from commercialvehicle.models import *
+from familyincomebenefit.models import *
 
 
 class PolicyInline(admin.StackedInline):
@@ -9,9 +9,13 @@ class PolicyInline(admin.StackedInline):
 class QuoteInline(admin.StackedInline):
     model = Quote
     extra = 1
+    
+class LifeInsuredInline(admin.StackedInline):
+    model = LifeInsured
+    extra = 1
 
-class RiskAdmin(admin.ModelAdmin):
-    inlines = [PolicyInline,QuoteInline]
+class FIBRiskAdmin(admin.ModelAdmin):
+    inlines = [LifeInsuredInline,PolicyInline,QuoteInline]
 
-admin.site.register(Risk, RiskAdmin)
+admin.site.register(FIBRisk, FIBRiskAdmin)
 

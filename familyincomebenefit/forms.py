@@ -5,13 +5,14 @@ from django.contrib.auth.models import User
 from familyincomebenefit.models import *
 
 
-class RiskForm(ModelForm):
+class FIBRiskForm(ModelForm):
     class Meta:
-        model = Risk
+        model = FIBRisk
         exclude = ('user')
 
 
-class InsuredLifeForm(ModelForm):
+class LifeInsuredForm(ModelForm):
     class Meta:
-        model = InsuredLife
+        model = LifeInsured
+        exclude = ('risk','user')
         
