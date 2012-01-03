@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="container">
+	{% if messages %}{% comment %}TODO: move this out into custom tag{% endcomment %}
+	  <div class="span-24">
+		  {% for message in messages %}
+		    <div {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
+		  {% endfor %}
+	  </div><!--/span-24 -->
+	{% endif %}
+  <div class="span-18 prepend-3">
+	<form method="post" action="." onsubmit="javascript:removecurrency(this);">
+	 {% csrf_token %}
+	    <table>
+	      <tr><td>{{r_form.name}}</td><td NOWRAP><span class="tabletext">give your quote a name so you can retrieve it later</span></td></tr>
+        </table><br />
+
+      <h3>Insured Life</h3>
+	  <p class="small">All fields are required.</p>
+        <table>
+	      {{ il_form.as_table }}
+        </table><br />
+
+	    <div class="buttonpanel">
+		  <a href="{% url iab_home %}"><input type="button" name="cancel" value="Cancel" /></a>
+	      <input type="submit" name="nav_save" value="{% trans 'Save for Later' %}" />
+	      <input type="submit" name="nav_quote" value="{% trans 'Get Quote Now' %}" />
+	    </div><!--buttonpanel-->
+
+      </form>
+  </div><!--/span-18 -->
+</div><!--/container-->
+{% endblock content %}
