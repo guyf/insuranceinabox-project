@@ -1,5 +1,5 @@
 # Bring in the base settings (then override with live settings)
-import settings
+from settings import *
 
 import logging
 logging.basicConfig(
