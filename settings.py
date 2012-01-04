@@ -36,7 +36,7 @@ DATABASES = {
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'Europe/London'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -159,9 +159,10 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django_facebook.context_processors.facebook',
 )
 
-SERIALIZATION_MODULES = {
-    'json': 'wadofstuff.django.serializers.json'
-}
+# Don't think this is used
+# SERIALIZATION_MODULES = {
+#     'json': 'wadofstuff.django.serializers.json'
+# }
 
 #TODO: DEFINE THIS FOR PRODUCTION USAGE STATIC_ROOT
 
