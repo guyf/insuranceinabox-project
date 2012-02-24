@@ -168,8 +168,4 @@ def fib_createquote(request, risk_id):
 
     return render_to_response('familyincomebenefit/quote.html', {'yearly': p_year, 'monthly': p_month  }, context_instance=RequestContext(request))
     
-    
-    
-    
-    
                                                    
